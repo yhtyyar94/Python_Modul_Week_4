@@ -1,4 +1,4 @@
-# Abiler herkes kendi ismi ile bir dosya olustursun ve kitap.json'u o dosyanin icine kopyalayip o sekilde calismaya devat etsin diger turlu kitap.json'i ortak kullanmis olcaz karisiklik olabilir.
+# Abiler herkes kendi ismi ile bir dosya olustursun ve kitap.json'u o dosyanin icine kopyalayip o sekilde calismaya devat etsin diger turlu kitap.json'i ortak kullanmis olcaz karisiklik olabilir. Calismaya baslamadan once kendi branchlerimizi olusturalim.
 
 Ornek dosya yapsisi:
 
