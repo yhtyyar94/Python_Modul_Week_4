@@ -1,3 +1,14 @@
+# Abiler herkes kendi ismi ile bir dosya olustursun ve kitap.json'u o dosyanin icine kopyalayip o sekilde calismaya devat etsin diger turlu kitap.json'i ortak kullanmis olcaz karisiklik olabilir.
+Ornek dosya yapsisi:
+README.md
+kitap.json
+yhtyyar
+  kitap.json
+  uyeler.json
+  tracking.json
+yakup
+tayfun
+
 # Python_Modul_Week_4
 
 # Library Project
