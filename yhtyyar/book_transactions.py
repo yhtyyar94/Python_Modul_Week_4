@@ -3,7 +3,7 @@ import json
 
 def list_all_books():
     try:
-        with open("yhtyyar/books.json", "r") as file:
+        with open("books.json", "r") as file:
             books = json.load(file)
             if len(books) == 0:
                 print("\033[91mKutuphanede kayitli kitap bulunmamaktadir.")
@@ -21,7 +21,7 @@ def list_all_books():
 
 def add_book():
     try:
-        with open("yhtyyar/books.json", "r+") as file:
+        with open("books.json", "r+") as file:
             books = json.load(file)
             book_name = input("Kitap adini giriniz : ")
             author = input("Yazar adini giriniz : ")
@@ -52,7 +52,7 @@ def add_book():
 
 def search_book():
     try:
-        with open("yhtyyar/books.json", "r") as file:
+        with open("books.json", "r") as file:
             books = json.load(file)
             search_text = input(
                 "Aramak istediginiz kitap icin anahtar kelima ya da barkod numarasi girin : "
@@ -79,14 +79,14 @@ def search_book():
 
 def delete_book():
     try:
-        with open("yhtyyar/books.json", "r") as file:
+        with open("books.json", "r") as file:
             books = json.load(file)
             barcode = input("Silmek istediginiz kitabin barkod numarasini girin : ")
 
             for book in books:
                 if str(book["Barkod"]).lower() == barcode:
                     books.remove(book)
-                    with open("yhtyyar/books.json", "w") as file:
+                    with open("books.json", "w") as file:
                         json.dump(books, file)
                         print("\033[92mKitap basariyla silindi.")
                         for keys in book:

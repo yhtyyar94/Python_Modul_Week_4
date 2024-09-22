@@ -6,16 +6,16 @@ from member_transactions import member_methods
 
 
 def check_files():
-    if not os.path.exists("yhtyyar/books.json"):
-        with open("yhtyyar/books.json", "w") as file:
+    if not os.path.exists("books.json"):
+        with open("books.json", "w") as file:
             json.dump([], file)
-    if not os.path.exists("yhtyyar/members.json"):
-        with open("yhtyyar/members.json", "w") as file:
+    if not os.path.exists("members.json"):
+        with open("members.json", "w") as file:
             json.dump(
                 {"new_member_id": 1, "deleted_member_ids": [], "members": []}, file
             )
-    if not os.path.exists("yhtyyar/tracking.json"):
-        with open("yhtyyar/tracking.json", "w") as file:
+    if not os.path.exists("tracking.json"):
+        with open("tracking.json", "w") as file:
             json.dump({"new transaction id": 1, "transactions": []}, file)
 
 

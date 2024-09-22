@@ -4,7 +4,7 @@ from get_transaction_time import transaction_start_end_time
 
 def list_all_members():
     try:
-        with open("yhtyyar/members.json", "r") as file:
+        with open("members.json", "r") as file:
             members = json.load(file)
             if len(members["members"]) == 0:
                 print("\033[91mUye bulunmamaktadir.")
@@ -21,7 +21,7 @@ def list_all_members():
 
 def add_member():
     try:
-        with open("yhtyyar/members.json", "r") as file:
+        with open("members.json", "r") as file:
             members = json.load(file)
             new_member = {}
             if len(members["deleted_member_ids"]) != 0:
@@ -33,7 +33,7 @@ def add_member():
             new_member["Telefon"] = input("Uye telefon numarasi girin : ")
             new_member["Adres"] = input("Uye adresi girin : ")
             members["members"].append(new_member)
-            with open("yhtyyar/members.json", "w") as file:
+            with open("members.json", "w") as file:
                 json.dump(members, file)
                 print("\033[92mUye basariyla eklendi.")
     except Exception as e:
@@ -42,7 +42,7 @@ def add_member():
 
 def search_member():
     try:
-        with open("yhtyyar/members.json", "r") as file:
+        with open("members.json", "r") as file:
             members = json.load(file)
             search_text = input(
                 "Aramak istediginiz uye icin anahtar kelima ya da uye numarasi girin : "
@@ -69,7 +69,7 @@ def search_member():
 
 def delete_member():
     try:
-        with open("yhtyyar/members.json", "r") as file:
+        with open("members.json", "r") as file:
             members = json.load(file)
             member_id = input("Silmek istediginiz uyenin numarasini girin : ")
 
@@ -77,7 +77,7 @@ def delete_member():
                 if str(member["id"]).lower() == member_id:
                     members["members"].remove(member)
                     members["deleted_member_ids"].append(member["id"])
-                    with open("yhtyyar/members.json", "w") as file:
+                    with open("members.json", "w") as file:
                         json.dump(members, file)
                         print("\033[92mUye basariyla silindi.")
                         for keys in member:
@@ -92,8 +92,8 @@ def delete_member():
 
 def book_lending():
     try:
-        with open("yhtyyar/books.json", "r") as books_file:
-            with open("yhtyyar/members.json", "r") as members_file:
+        with open("books.json", "r") as books_file:
+            with open("members.json", "r") as members_file:
                 books = json.load(books_file)
                 members = json.load(members_file)
                 barcode = input(
@@ -108,7 +108,7 @@ def book_lending():
                 ]:
                     print("\033[91mUye bulunamadi.")
                 else:
-                    with open("yhtyyar/tracking.json", "r") as tracking_file:
+                    with open("tracking.json", "r") as tracking_file:
                         tracking = json.load(tracking_file)
                         if barcode in [
                             str(transaction["Barkod"])
@@ -147,7 +147,7 @@ def book_lending():
                         new_transaction["Iade durumu"] = False
 
                         tracking["transactions"].append(new_transaction)
-                        with open("yhtyyar/tracking.json", "w") as tracking_file:
+                        with open("tracking.json", "w") as tracking_file:
                             json.dump(tracking, tracking_file)
                             print("\033[92mKitap basariyla odunc verildi.")
 
@@ -157,7 +157,7 @@ def book_lending():
 
 def book_return():
     try:
-        with open("yhtyyar/tracking.json", "r") as file:
+        with open("tracking.json", "r") as file:
             tracking = json.load(file)
             barcode = input(
                 "Iadesini yapmak istediginiz kitabin barkod numarasini girin : "
@@ -168,7 +168,7 @@ def book_return():
                     and not transaction["Iade durumu"]
                 ):
                     transaction["Iade durumu"] = True
-                    with open("yhtyyar/tracking.json", "w") as file:
+                    with open("tracking.json", "w") as file:
                         json.dump(tracking, file)
                         print("\033[92mKitap basariyla iade edildi.")
                     break
@@ -180,7 +180,7 @@ def book_return():
 
 def list_all_not_returned_books():
     try:
-        with open("yhtyyar/tracking.json", "r") as file:
+        with open("tracking.json", "r") as file:
             tracking = json.load(file)
             counter = 0
             for transaction in tracking["transactions"]:
