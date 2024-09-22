@@ -1,0 +1,69 @@
+{
+  "new transaction id": 9,
+  "transactions": [
+    {
+      "id": 1,
+      "Uye Numarasi": "1",
+      "Uye Adi": "Test",
+      "Tel": "12456",
+      "Adres": "test test",
+      "Barkod": 9786052950524,
+      "Dil": "Icerik Yok",
+      "Fiyat": 5.2,
+      "Kitap_Adi": "Alice Harikalar Diyar\u0131nda",
+      "Yayinevi": "\u0130\u015f Bankas\u0131 K\u00fclt\u00fcr Yay\u0131nlar\u0131 - Modern Klasikler",
+      "Yazar": "Lewis Carroll",
+      "Kayit tarihi": "22-09-2024",
+      "Kitap iade tarihi": "04-10-2024",
+      "Iade durumu": true
+    },
+    {
+      "id": 6,
+      "Uye Numarasi": "2",
+      "Uye Adi": "Yhtyyar",
+      "Tel": "65432",
+      "Adres": "jshdl djhld",
+      "Barkod": 9786052950524,
+      "Dil": "Icerik Yok",
+      "Fiyat": 5.2,
+      "Kitap_Adi": "Alice Harikalar Diyar\u0131nda",
+      "Yayinevi": "\u0130\u015f Bankas\u0131 K\u00fclt\u00fcr Yay\u0131nlar\u0131 - Modern Klasikler",
+      "Yazar": "Lewis Carroll",
+      "Kayit tarihi": "22-09-2024",
+      "Kitap iade tarihi": "04-10-2024",
+      "Iade durumu": true
+    },
+    {
+      "id": 7,
+      "Uye Numarasi": "2",
+      "Uye Adi": "Yhtyyar",
+      "Tel": "65432",
+      "Adres": "jshdl djhld",
+      "Barkod": 9786052950524,
+      "Dil": "Icerik Yok",
+      "Fiyat": 5.2,
+      "Kitap_Adi": "Alice Harikalar Diyar\u0131nda",
+      "Yayinevi": "\u0130\u015f Bankas\u0131 K\u00fclt\u00fcr Yay\u0131nlar\u0131 - Modern Klasikler",
+      "Yazar": "Lewis Carroll",
+      "Kayit tarihi": "22-09-2024",
+      "Kitap iade tarihi": "04-10-2024",
+      "Iade durumu": false
+    },
+    {
+      "id": 8,
+      "Uye Numarasi": "2",
+      "Uye Adi": "Yhtyyar",
+      "Tel": "65432",
+      "Adres": "jshdl djhld",
+      "Barkod": 9786052989135,
+      "Dil": "T\u00fcrk\u00e7e",
+      "Fiyat": 21.0,
+      "Kitap_Adi": "Yukarlarda En Uzaklarda",
+      "Yayinevi": "K\u0131rm\u0131z\u0131 Kedi",
+      "Yazar": "\u0130nci Aral",
+      "Kayit tarihi": "22-09-2024",
+      "Kitap iade tarihi": "04-10-2024",
+      "Iade durumu": true
+    }
+  ]
+}
